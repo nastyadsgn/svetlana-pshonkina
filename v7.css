@@ -1,0 +1,52 @@
+/* Version 7: targeted revisions. Existing color and typography tokens are retained. */
+html body.home-page .v7-num,
+html body.home-page :is(.fact strong,.hp-number strong,.hp-path-card>strong,.hp-stage-number,.hp-step button>span,.hp-article-days span,[data-counter],#certificate-count,.hp-footer-phone,.phone,.hp-hero-phone,.header-phone a) {
+ font-family:var(--body)!important; font-variant-numeric:lining-nums; letter-spacing:normal;
+}
+html body.home-page .doctor-badge text {font-family:var(--body)!important;}
+html body.home-page .benefit-icon {display:grid!important;place-items:center;width:44px!important;height:44px!important;min-width:44px;border-radius:50%!important;background:var(--accent)!important;color:white!important;flex:0 0 44px;}
+html body.home-page .benefit-icon svg {width:23px!important;height:23px!important;color:inherit;}
+@media(min-width:720px){
+ html body.home-page .results-area .messengers {flex-wrap:wrap!important;gap:8px!important;}
+ html body.home-page .results-area .messengers a {font-size:12px!important;width:auto!important;height:40px!important;min-height:40px!important;padding:0 12px!important;border-radius:12px!important;gap:8px!important;color:white!important;}
+ html body.home-page .results-area .messengers .social-symbol,html body.home-page .results-area .messengers .brand-icon {width:18px!important;height:18px!important;}
+ html body.home-page .hp-team-layout {align-items:stretch!important;}
+ html body.home-page .hp-team-layout .hp-team-lead {height:auto!important;min-height:0!important;position:relative;}
+ html body.home-page .hp-team-lead .hp-team-photo {position:absolute;inset:0;height:100%!important;min-height:0!important;}
+ html body.home-page .hp-team-side {grid-template-rows:repeat(3,auto)!important;}
+ html body.home-page .hp-team-side .hp-team-card {height:auto!important;min-height:150px;}
+ html body.home-page .hp-team-side .hp-team-photo {position:relative;min-height:125px!important;}
+ html body.home-page .hp-team-side .hp-team-photo img {position:absolute;inset:0;}
+}
+html body.home-page .hp-team-photo img {display:block;width:100%;height:100%;object-fit:cover;object-position:center 25%;}
+html body.home-page .hp-media-space {position:relative;overflow:hidden;}
+html body.home-page .hp-media-space img {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+html body.home-page .hp-media-space>span {position:absolute;left:16px;bottom:16px;z-index:1;background:rgba(255,255,255,.94);color:#242020;border-radius:8px;padding:6px 10px;}
+html body.home-page .hp-photo-blank {overflow:hidden;position:relative;}
+html body.home-page .hp-photo-blank img {display:block;width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:40% center;}
+html body.home-page .v7-service-face {position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;}
+html body.home-page .v7-service-face img {position:static;width:100%;height:100%;object-fit:cover;object-position:center top;filter:none!important;}
+html body.home-page .hp-stage-visual {overflow:hidden;isolation:isolate;}
+html body.home-page .hp-stage-photo {position:absolute!important;inset:auto -32px -46px auto!important;width:290px!important;height:290px!important;min-height:0!important;pointer-events:none;z-index:-1;display:block!important;background:none!important;}
+html body.home-page .v7-stage-icon {width:100%;height:100%;fill:none;stroke:white;stroke-width:.9;stroke-linecap:round;stroke-linejoin:round;opacity:.18;}
+html body.home-page .hp-stage-visual>.hp-btn {position:relative;z-index:1;}
+html body.home-page .hp-review-proof {display:flex;gap:8px;height:auto!important;}
+html body.home-page .hp-review-proof img {display:block;width:100%;height:100%;object-fit:cover;}
+html body.home-page .v7-proof-pair {display:grid;grid-template-columns:1fr 1fr;overflow:hidden;border-radius:12px;max-width:260px;aspect-ratio:2/1.2;}
+html body.home-page .v7-proof-caption {font-family:var(--body);font-size:11px;color:#696361;margin-top:8px;}
+@media(max-width:719px){
+ html body.home-page :is(.hero-buttons,.hp-services-bottom>div) {width:100%!important;}
+ html body.home-page :is(.hero-buttons .button,.hero-buttons a,.hp-services-bottom .hp-btn,.hp-consult-form .hp-btn,.hp-consult-panel>.hp-btn,.hp-checklist .hp-btn,.hp-team-all,.hp-blog>.hp-heading>.hp-btn,.hp-footer-consult .hp-btn) {width:100%!important;max-width:none!important;justify-content:space-between!important;}
+ html body.home-page .hp-services-bottom>div {display:flex;flex-direction:column;}
+ html body.home-page .hp-team-heading {flex-wrap:wrap;}
+ html body.home-page .hp-results-main {position:relative;}
+ html body.home-page .hp-result-card>.hp-btn {width:auto!important;max-width:calc(100% - 154px)!important;min-height:44px!important;padding-block:0!important;margin:0!important;}
+ html body.home-page .hp-result-bottom {position:absolute!important;right:0;bottom:0;margin:0!important;padding:0!important;height:44px!important;width:146px!important;}
+ html body.home-page #before-after .hp-result-bottom .hp-controls {height:44px;display:flex!important;align-items:center!important;justify-content:flex-end;gap:6px!important;margin:0!important;}
+ html body.home-page #before-after .hp-controls .hp-round {width:40px!important;height:40px!important;min-width:40px!important;}
+ html body.home-page #before-after [data-counter] {min-width:0;font-size:10px;white-space:nowrap;}
+ html body.home-page .hp-stage-photo {width:205px!important;height:205px!important;bottom:-25px!important;right:-20px!important;}
+}
+@media(prefers-reduced-motion:reduce){html body.home-page *{scroll-behavior:auto!important;}}
+
+html body.home-page .hp-service>img{filter:none!important;}

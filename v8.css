@@ -1,0 +1,1029 @@
+/* Version 8 — правки по макету Frame 2. Подключается последним. */
+
+/* ---------- Шрифты: текст и цифры Inter Tight, заголовки H1–H4 Tenor Sans ---------- */
+html body.home-page {
+  --body: "Inter Tight", "Inter", system-ui, sans-serif;
+  --v8-side: 64px;
+  --v8-pill: 999px;
+  font-family: var(--body);
+}
+html body.home-page :is(p, a, button, span, li, label, input, select, textarea, small, strong, b, dd, dt, summary, figcaption, blockquote, legend, div, em, sup) {
+  font-family: var(--body);
+}
+html body.home-page :is(h1, h2, h3, h4),
+html body.home-page :is(h1, h2, h3, h4) :is(span, br, a, em) {
+  font-family: "Tenor Sans", "Onest", sans-serif !important;
+}
+html body.home-page :is(h1, h2, h3, h4) .v7-num { font-family: var(--body) !important; }
+
+/* Акцентная вторая часть заголовка на светлых блоках */
+html body.home-page .v8-accent { color: var(--accent) !important; }
+html body.home-page :is(.hero-layout, .hp-stage-visual, .hp-all-services, .hp-checklist-v2, .hp-consult-panel, .v8-awards, .hp-footer) .v8-accent { color: inherit !important; }
+
+/* ---------- Плашки и кнопки: скругление 100% ---------- */
+html body.home-page :is(.button, .hp-btn:not(.hp-text-btn), .hp-chip, .hp-filter button, .before-after-pill, .header-book, .credential, .hp-kicker, .image-label, .case-caption, .hp-media-space > span, .hp-service-top > span, .hp-article-section, .hp-result-pair small, .hp-contact-choice span, .hp-simple-field input, .drawer-act, .v8-review-tag, .hp-form input:not([type=checkbox]):not([type=radio])) {
+  border-radius: var(--v8-pill) !important;
+}
+html body.home-page :is(.messengers a, .hp-social-links a, .social-symbol) { border-radius: var(--v8-pill) !important; }
+
+/* Разделы/рубрики — скруглённая плашка, без капса */
+html body.home-page .hp-kicker {
+  display: inline-flex !important;
+  align-items: center;
+  width: fit-content;
+  min-height: 28px;
+  padding: 5px 13px !important;
+  background: var(--hp-white, #fbfaf7);
+  color: var(--ink, #352d2b) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font: 500 12px/1.2 var(--body) !important;
+  box-shadow: inset 0 0 0 1px rgba(53, 45, 43, .08);
+}
+html body.home-page :is(.hp-all-services, .hp-checklist-v2, .v8-awards) .hp-kicker {
+  background: rgba(255, 255, 255, .16);
+  color: #fff !important;
+  box-shadow: none;
+}
+html body.home-page .hp-article-color .hp-kicker { background: #fff; }
+
+/* ---------- Сетка: контент секций по сетке первого экрана ---------- */
+@media (min-width: 1200px) {
+  html body.home-page .hp-section {
+    max-width: none !important;
+    margin-left: var(--v8-side) !important;
+    margin-right: var(--v8-side) !important;
+    width: auto !important;
+  }
+  html body.home-page .hp-footer-inner {
+    padding-left: calc(var(--v8-side) - 16px) !important;
+    padding-right: calc(var(--v8-side) - 16px) !important;
+  }
+}
+
+/* ---------- Шапка ---------- */
+@media (min-width: 1200px) {
+  html body.home-page .site-header { gap: 0 !important; }
+  html body.home-page :is(.utility-nav, .services-nav) { flex: none !important; gap: 0 !important; }
+  html body.home-page .utility-nav { margin-left: 26px !important; }
+  html body.home-page .services-nav { margin-left: 22px !important; }
+  html body.home-page .header-phone { margin-left: auto !important; margin-right: 14px !important; }
+  html body.home-page .before-after-pill { margin-right: 7px !important; }
+  html body.home-page .utility-nav > * + *,
+  html body.home-page .services-nav > * + * { margin-left: var(--v8-nav-gap, 18px) !important; }
+  html body.home-page .utility-nav .utility-item,
+  html body.home-page .services-nav .service-trigger { padding-left: 0 !important; padding-right: 0 !important; }
+}
+@media (min-width: 1200px) and (max-width: 1499px) {
+  html body.home-page { --v8-nav-gap: 14px; }
+  html body.home-page .utility-nav { margin-left: 20px !important; }
+  html body.home-page .services-nav { margin-left: 16px !important; }
+}
+html body.home-page .header-phone a {
+  color: var(--accent) !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+/* ---------- Первый экран ---------- */
+html body.home-page h1 { white-space: normal; }
+@media (min-width: 1200px) {
+  html body.home-page #hero-title { font-size: clamp(30px, 2.45vw, 40px) !important; line-height: 1.12 !important; max-width: none !important; }
+  html body.home-page .results-area { margin-left: 34px !important; margin-right: 12px !important; }
+  html body.home-page .results-area .messengers { justify-content: flex-end !important; }
+  html body.home-page .doctor-figure { transform: translateX(-14px); }
+}
+html body.home-page .benefit h3 { font-size: 14px !important; line-height: 1.2 !important; margin-bottom: 4px !important; }
+html body.home-page .benefit p { font-size: 12px !important; }
+html body.home-page .benefit-icon { width: 38px !important; height: 38px !important; min-width: 38px !important; flex: 0 0 38px !important; }
+html body.home-page .benefit-icon svg { width: 19px !important; height: 19px !important; }
+
+/* Мобильный первый экран: иконки меньше, без наездов */
+@media (max-width: 719px) {
+  html body.home-page .results-area .benefits { gap: 8px !important; }
+  html body.home-page .results-area .benefit {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    padding: 12px !important;
+    position: relative !important;
+  }
+  html body.home-page .results-area .benefit-icon {
+    position: static !important;
+    width: 30px !important; height: 30px !important; min-width: 30px !important; flex: 0 0 30px !important;
+    transform: none !important; margin: 0 !important; inset: auto !important;
+  }
+  html body.home-page .results-area .benefit-icon svg { width: 16px !important; height: 16px !important; }
+  html body.home-page .results-area .benefit h3 { font-size: 13px !important; }
+  html body.home-page .results-area .benefit p { font-size: 11.5px !important; line-height: 1.35 !important; }
+  html body.home-page .results-area .messengers { gap: 8px !important; }
+  html body.home-page .results-area .messengers a { width: 44px !important; height: 44px !important; min-width: 44px !important; }
+  html body.home-page .results-area .messengers .brand-icon { width: 18px !important; height: 18px !important; }
+  html body.home-page .hp-hero-phone { color: var(--accent) !important; font-weight: 600 !important; }
+}
+
+/* Мобильное меню: телефон акцентно — красным и крупнее */
+html body.home-page .drawer-contact .v8-drawer-phone {
+  color: var(--accent) !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -.01em;
+}
+html body.home-page .drawer-contact .v8-drawer-phone .v7-num { color: inherit !important; }
+html body.home-page .drawer-contact .v8-drawer-phone::first-letter { color: inherit; }
+@media (max-width: 719px) {
+  html body.home-page .drawer-footer { flex-direction: column !important; align-items: stretch !important; gap: 14px !important; }
+  html body.home-page .drawer-actions { display: grid !important; grid-template-columns: 1fr 1fr; gap: 8px; }
+  html body.home-page .drawer-act { justify-content: center !important; }
+}
+
+/* ---------- О враче: тексты местами ---------- */
+@media (min-width: 1200px) {
+  html body.home-page .hp-about { grid-template-areas: none !important; }
+  html body.home-page .hp-about-detail { order: 1; grid-column: 1 !important; grid-row: 1 !important; }
+  html body.home-page .hp-about-intro { order: 2; grid-column: 2 !important; grid-row: 1 !important; }
+  html body.home-page .hp-credentials { grid-row: 2 !important; grid-column: 1 / -1 !important; }
+}
+html body.home-page .hp-number-value { display: flex; flex-direction: column; gap: 2px !important; }
+html body.home-page .hp-number strong { font-size: 54px !important; line-height: 1 !important; margin: 0 !important; }
+html body.home-page .hp-number strong sup { font-size: .45em !important; }
+html body.home-page .hp-number p { margin: 0 !important; font-size: 14px !important; line-height: 1.35 !important; }
+
+/* Дипломы: сверху сертификаты, снизу текст — как в первой карточке */
+html body.home-page .v8-cert-card {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  gap: 18px !important;
+}
+html body.home-page .v8-cert-card .hp-cert-open {
+  position: relative;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  background: none !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+html body.home-page .v8-cert-card .hp-cert-photo {
+  position: relative !important;
+  display: flex !important;
+  gap: 0 !important;
+  width: 100% !important;
+  height: 150px !important;
+  background: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: visible !important;
+  inset: auto !important;
+}
+html body.home-page .v8-cert-card .hp-cert-photo img {
+  position: absolute !important;
+  top: 0 !important;
+  width: 112px !important;
+  height: 150px !important;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 8px 22px rgba(53, 45, 43, .14);
+  transform: none !important;
+  margin: 0 !important;
+  background: #fff;
+}
+html body.home-page .v8-cert-card .hp-cert-photo img:nth-child(1) { left: 0 !important; transform: rotate(-4deg) !important; z-index: 1; }
+html body.home-page .v8-cert-card .hp-cert-photo img:nth-child(2) { left: 74px !important; z-index: 2; }
+html body.home-page .v8-cert-card .hp-cert-photo img:nth-child(3) { left: 148px !important; transform: rotate(4deg) !important; z-index: 3; display: block !important; }
+html body.home-page .v8-cert-card .hp-round { position: absolute !important; right: 0 !important; top: 0 !important; bottom: auto !important; left: auto !important; }
+html body.home-page .v8-cert-text h3 { margin: 0 0 8px !important; }
+html body.home-page .v8-cert-text p { margin: 0 !important; }
+
+/* ---------- Опыт и награды: новый компактный блок ---------- */
+html body.home-page .v8-exp .hp-heading { margin-bottom: var(--head-gap, 32px) !important; }
+html body.home-page .v8-exp-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 16px;
+}
+html body.home-page .v8-edu {
+  background: var(--card, #fbfaf7);
+  border-radius: var(--r-card, 24px);
+  padding: 28px 30px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+html body.home-page .v8-edu .hp-kicker { background: var(--page, #f2eeeb); box-shadow: none; }
+html body.home-page .v8-edu-list { list-style: none; margin: 0; padding: 0; }
+html body.home-page .v8-edu-list li {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 18px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-top: 1px solid var(--hp-line, #dcd5d0);
+}
+html body.home-page .v8-edu-list li:first-child { border-top: 0; }
+html body.home-page .v8-edu-list strong { font: 500 30px/1 var(--body) !important; color: var(--accent); letter-spacing: -.02em; }
+html body.home-page .v8-edu-list h3 { font-size: 17px !important; line-height: 1.25 !important; margin: 0 0 4px !important; color: var(--ink); }
+html body.home-page .v8-edu-list p { margin: 0; font-size: 14px; color: var(--muted, #6b605b); }
+html body.home-page .v8-awards {
+  position: relative;
+  overflow: hidden;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--r-card, 24px);
+  padding: 28px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+html body.home-page .v8-awards::after {
+  content: "";
+  position: absolute;
+  right: -90px; bottom: -110px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  border: 22px solid rgba(255, 255, 255, .07);
+  pointer-events: none;
+}
+html body.home-page .v8-awards-top { display: flex; justify-content: space-between; align-items: center; }
+html body.home-page .v8-awards-cup { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: rgba(255, 255, 255, .14); }
+html body.home-page .v8-awards-cup svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 1.6; }
+html body.home-page .v8-awards-count { display: flex; align-items: center; gap: 16px; }
+html body.home-page .v8-awards-count strong { font: 400 72px/0.9 var(--body) !important; letter-spacing: -.03em; }
+html body.home-page .v8-awards-count p { margin: 0; font-size: 15px; line-height: 1.4; color: rgba(255, 255, 255, .88); }
+html body.home-page .v8-award-names { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; position: relative; z-index: 1; }
+html body.home-page .v8-award-names li { padding: 7px 12px; border-radius: 999px; background: rgba(255, 255, 255, .12); font-size: 12.5px; line-height: 1.2; }
+html body.home-page .v8-awards > .hp-btn { margin-top: auto !important; align-self: flex-start; position: relative; z-index: 1; gap: 10px; }
+html body.home-page .v8-awards-dialog { max-width: 560px; }
+html body.home-page .v8-awards-dialog h2 { margin: 12px 0 18px; }
+html body.home-page .v8-awards-list { list-style: none; margin: 0; padding: 0; }
+html body.home-page .v8-awards-list li { display: grid; grid-template-columns: 64px 1fr; gap: 14px; padding: 12px 0; border-top: 1px solid var(--hp-line, #dcd5d0); font-size: 15px; line-height: 1.35; }
+html body.home-page .v8-awards-list strong { color: var(--accent); font-weight: 600; }
+
+/* ---------- СМИ ---------- */
+html body.home-page .hp-media { position: relative !important; overflow: hidden !important; isolation: isolate; }
+html body.home-page .hp-media-space { position: absolute !important; inset: 0 !important; height: auto !important; z-index: -1; }
+html body.home-page .hp-media-space img { object-position: center 30%; }
+html body.home-page .hp-media-space > span { top: 14px !important; bottom: auto !important; left: 14px !important; font-size: 12px; padding: 6px 12px !important; }
+html body.home-page .hp-media-title { position: relative; z-index: 1; }
+
+/* ---------- Услуги ---------- */
+html body.home-page .hp-services .hp-heading { align-items: flex-end !important; }
+html body.home-page .hp-services .hp-heading > p { text-align: right; max-width: 330px !important; margin: 0 0 4px auto !important; }
+@media (min-width: 1200px) {
+  html body.home-page .hp-services-grid { grid-template-rows: 292px 292px !important; }
+}
+html body.home-page .hp-service > img { object-fit: cover !important; }
+html body.home-page .hp-service > img.v8-img-breast { object-position: 50% 30% !important; }
+html body.home-page .hp-service > img.v8-img-abdomen { object-position: 50% 55% !important; }
+html body.home-page .hp-service > img.v8-img-lipo { object-position: 50% 45% !important; }
+html body.home-page .hp-service > img.v8-img-face { object-position: 50% 25% !important; }
+
+/* ---------- До и после ---------- */
+html body.home-page .hp-result-pair img { object-fit: cover; object-position: center 30%; }
+html body.home-page .gallery-dialog .result-pair img { width: 100%; height: auto; max-height: 70vh; object-fit: contain; }
+
+/* ---------- Отзывы: только текст, карточка отделена от фона ---------- */
+html body.home-page .hp-reviews { padding-bottom: 40px !important; margin-bottom: 24px !important; }
+html body.home-page .hp-reviews h2 { margin-bottom: 36px !important; }
+html body.home-page .hp-reviews > div:first-child { display: flex; flex-direction: column; gap: 0; }
+html body.home-page .hp-reviews .hp-controls { margin-top: 8px !important; }
+html body.home-page .v8-review {
+  position: relative;
+  margin: 0 !important;
+  background: var(--card, #fbfaf7);
+  border-radius: var(--r-card, 24px);
+  padding: 34px 38px 32px !important;
+  box-shadow: 0 1px 0 rgba(53, 45, 43, .04), 0 18px 40px -24px rgba(53, 45, 43, .28);
+  border-left: 3px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-height: 300px;
+}
+html body.home-page .v8-review::before {
+  content: "“";
+  position: absolute;
+  right: 30px; top: 6px;
+  font: 400 120px/1 "Tenor Sans", serif;
+  color: var(--accent);
+  opacity: .12;
+  pointer-events: none;
+}
+html body.home-page .v8-review-tag {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 7px 14px;
+  background: var(--accent);
+  color: #fff;
+  font: 500 12.5px/1.2 var(--body);
+}
+html body.home-page .v8-review blockquote {
+  margin: 0 !important;
+  font: 400 21px/1.5 var(--body) !important;
+  color: var(--ink, #221b19) !important;
+  letter-spacing: -.005em;
+  text-transform: none !important;
+  max-width: 760px;
+}
+html body.home-page .v8-review.v8-long blockquote { font-size: 17px !important; line-height: 1.55 !important; }
+html body.home-page .v8-review figcaption {
+  margin-top: auto !important;
+  display: flex; align-items: center; gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--hp-line, #dcd5d0);
+  font-size: 13px !important;
+  color: var(--muted, #6b605b) !important;
+}
+html body.home-page .v8-review figcaption strong { color: var(--ink); font-weight: 600; font-size: 15px; }
+html body.home-page .v8-review figcaption span::before { content: "·"; margin-right: 10px; color: var(--hp-line, #dcd5d0); }
+
+/* ---------- Консультация: фото на всю карточку, градиент, белый текст ---------- */
+html body.home-page .hp-consult-visual {
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  min-height: 520px;
+  isolation: isolate;
+  background: #3a312e !important;
+}
+html body.home-page .hp-consult-visual .hp-photo-blank {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  z-index: -2;
+}
+html body.home-page .hp-consult-visual .hp-photo-blank img { object-position: 35% 30% !important; }
+html body.home-page .v8-consult-shade {
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(20, 14, 13, 0) 40%, rgba(20, 14, 13, .55) 68%, rgba(20, 14, 13, .86) 100%);
+}
+html body.home-page .hp-consult-visual > a,
+html body.home-page .hp-consult-visual > p { position: relative; color: #fff !important; margin-left: 30px !important; margin-right: 30px !important; }
+html body.home-page .hp-consult-visual > a { font-size: 30px !important; font-weight: 500 !important; margin-bottom: 12px !important; }
+html body.home-page .hp-consult-visual > a .v7-num { color: #fff !important; }
+html body.home-page .hp-consult-visual > p { margin-top: 0 !important; margin-bottom: 4px !important; opacity: .92; }
+html body.home-page .hp-consult-visual > p:last-of-type { margin-bottom: 28px !important; }
+
+/* Форма: имя и способ связи в один ряд, способ связи компактнее, согласия в один ряд */
+html body.home-page .v8-form-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: end;
+}
+html body.home-page .v8-form-row fieldset { margin: 0 !important; min-width: 0; }
+html body.home-page .v8-form-row .hp-contact-choice { display: flex !important; gap: 6px !important; flex-wrap: nowrap !important; grid-template-columns: none !important; }
+html body.home-page .v8-form-row .hp-contact-choice label { flex: 0 0 auto !important; width: auto !important; }
+html body.home-page .v8-form-row .hp-contact-choice span {
+  min-height: 44px !important; height: 44px !important;
+  padding: 0 12px !important;
+  gap: 6px !important;
+  font-size: 12.5px !important;
+  white-space: nowrap;
+}
+html body.home-page .v8-form-row .hp-simple-field input { height: 44px !important; min-height: 44px !important; }
+html body.home-page .hp-consents { display: flex !important; flex-wrap: wrap; gap: 8px 24px !important; }
+html body.home-page .hp-consents .hp-consent { margin: 0 !important; }
+html body.home-page .v8-submit { justify-content: center !important; text-align: center; }
+html body.home-page .v8-submit svg { display: none !important; }
+@media (max-width: 719px) {
+  html body.home-page .v8-form-row { grid-template-columns: 1fr; }
+  html body.home-page .v8-form-row .hp-contact-choice { flex-wrap: wrap !important; }
+  html body.home-page .v8-form-row .hp-contact-choice label { flex: 1 1 calc(50% - 6px) !important; }
+  html body.home-page .v8-form-row .hp-contact-choice span { justify-content: center; }
+  html body.home-page .hp-consult-visual { min-height: 420px; }
+  html body.home-page .hp-consult-visual > a { font-size: 24px !important; margin-left: 20px !important; }
+  html body.home-page .hp-consult-visual > p { margin-left: 20px !important; }
+}
+
+/* ---------- Этапы ---------- */
+html body.home-page .hp-stage-visual { justify-content: space-between !important; }
+html body.home-page .hp-stage-number { font-size: 76px !important; line-height: 1 !important; }
+html body.home-page .hp-stage-visual h3 {
+  order: 3;
+  margin: auto 0 18px !important;
+  font-size: 32px !important;
+  line-height: 1.12 !important;
+  max-width: 420px !important;
+  position: relative; z-index: 1;
+}
+html body.home-page .hp-stage-visual > .hp-btn { order: 4; align-self: flex-start; }
+html body.home-page .hp-stage-number { order: 1; position: relative; z-index: 1; }
+html body.home-page .v8-stage-mark {
+  order: 2;
+  position: absolute !important;
+  inset: 26px 26px auto auto !important;
+  width: 150px !important;
+  height: 150px !important;
+  z-index: 0 !important;
+  display: grid !important;
+  place-items: center;
+}
+html body.home-page .v8-stage-ring { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: rgba(255, 255, 255, .22); stroke-width: 3; stroke-linecap: round; }
+html body.home-page .v8-stage-ring path { stroke: rgba(255, 255, 255, .85); stroke-width: 5; }
+html body.home-page .v8-stage-iconwrap {
+  display: grid; place-items: center;
+  width: 92px; height: 92px; border-radius: 50%;
+  background: rgba(255, 255, 255, .12);
+}
+html body.home-page .v8-stage-iconwrap .v7-stage-icon {
+  width: 46px !important; height: 46px !important;
+  stroke: #fff !important; stroke-width: 1.7 !important; opacity: 1 !important;
+  fill: none;
+}
+/* Справа: без номеров и названий, только текст этапа; активный — акцентнее, не красным */
+html body.home-page .hp-step { position: relative; }
+html body.home-page .hp-step > button {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important; height: 100% !important;
+  opacity: 0 !important;
+  z-index: 1;
+  margin: 0 !important; padding: 0 !important;
+}
+html body.home-page .hp-step > p {
+  margin: 0 !important;
+  color: #8a807b !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  transition: color .15s;
+}
+html body.home-page .hp-step.is-active > p { color: var(--ink, #221b19) !important; font-weight: 500 !important; }
+html body.home-page .hp-step.is-active:before { box-shadow: 0 0 0 5px var(--hp-white), 0 0 0 6px var(--ink, #221b19) !important; background: var(--ink, #221b19) !important; }
+html body.home-page .hp-step + .hp-step { margin-top: 26px !important; }
+
+/* ---------- Команда: 4 карточки в ряд, фото на всю карточку ---------- */
+html body.home-page .hp-team-layout {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  align-items: stretch !important;
+}
+html body.home-page .hp-team-layout .hp-team-card,
+html body.home-page .hp-team-layout .hp-team-lead {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: var(--r-card, 24px) !important;
+  background: var(--card, #fbfaf7) !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+html body.home-page .hp-team-layout .hp-team-photo {
+  position: relative !important;
+  inset: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  aspect-ratio: 4 / 4.6;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  flex: none !important;
+}
+html body.home-page .hp-team-layout .hp-team-photo img { position: absolute !important; inset: 0 !important; padding: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover !important; object-position: center 22% !important; border-radius: 0 !important; }
+html body.home-page .hp-team-lead .hp-team-photo img { object-position: center 8% !important; }
+html body.home-page .hp-team-layout .hp-team-caption {
+  position: static !important;
+  inset: auto !important;
+  margin: 0 !important;
+  padding: 16px 18px 18px !important;
+  background: transparent !important;
+  color: var(--ink) !important;
+  border-radius: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  min-height: 0 !important;
+  width: auto !important;
+}
+html body.home-page .hp-team-layout .hp-team-lead .hp-team-caption { background: var(--accent) !important; color: #fff !important; flex: 1; }
+html body.home-page .hp-team-layout .hp-team-caption h3 { margin: 0 !important; font-size: 17px !important; line-height: 1.2 !important; color: inherit !important; }
+html body.home-page .hp-team-layout .hp-team-lead .hp-team-caption .hp-text-btn { color: #fff !important; }
+html body.home-page .hp-team-layout .hp-specialty { display: none !important; }
+@media (max-width: 899px) {
+  html body.home-page .hp-team-layout { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+}
+
+/* ---------- Блог: рубрики плашкой, не капсом ---------- */
+html body.home-page .hp-article-section {
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font: 500 12px/1.2 var(--body) !important;
+  padding: 6px 13px !important;
+}
+
+/* ---------- Подвал: адреса выше, плашкой, в одну линию ---------- */
+html body.home-page .hp-footer-contact {
+  display: grid !important;
+  grid-template-columns: max-content minmax(0, 1fr) max-content !important;
+  align-items: center !important;
+  gap: 24px !important;
+}
+html body.home-page .hp-footer-phone { font-size: 48px !important; }
+html body.home-page .v8-footer-address {
+  justify-self: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 4px 6px;
+  padding: 8px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, .1);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .16);
+  color: #fff;
+}
+html body.home-page .v8-addr-title { grid-column: 1 / -1; font: 500 11.5px/1.2 var(--body); opacity: .72; padding: 2px 10px 4px; }
+html body.home-page .v8-footer-address p {
+  margin: 0 !important;
+  display: grid; grid-template-columns: auto 1fr; column-gap: 7px; align-items: center;
+  padding: 8px 14px 8px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .12);
+  font-size: 13px !important;
+  line-height: 1.25;
+  color: #fff !important;
+  white-space: nowrap;
+}
+html body.home-page .v8-footer-address p small { grid-column: 2; opacity: .7; font-size: 11px; white-space: normal; max-width: 230px; }
+html body.home-page .v8-footer-address .hp-icon { grid-row: 1 / 3; width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.7; flex: none; }
+@media (max-width: 1199px) {
+  html body.home-page .hp-footer-contact { grid-template-columns: 1fr auto !important; }
+  html body.home-page .v8-footer-address { grid-column: 1 / -1; grid-row: 2; justify-self: start; }
+}
+@media (max-width: 719px) {
+  html body.home-page .hp-footer-contact { grid-template-columns: 1fr !important; }
+  html body.home-page .hp-footer-phone { font-size: 34px !important; }
+  html body.home-page .v8-footer-address { grid-row: auto; grid-template-columns: 1fr; justify-self: stretch; border-radius: 22px; }
+  html body.home-page .v8-footer-address p { border-radius: 16px; white-space: normal; }
+}
+
+/* ---------- Адаптив блока опыта ---------- */
+@media (max-width: 899px) {
+  html body.home-page .v8-exp-grid { grid-template-columns: 1fr; }
+  html body.home-page .v8-edu { padding: 22px 20px 6px; }
+  html body.home-page .v8-edu-list li { grid-template-columns: 70px 1fr; gap: 12px; }
+  html body.home-page .v8-edu-list strong { font-size: 24px !important; }
+  html body.home-page .v8-awards { padding: 22px 20px 24px; }
+  html body.home-page .v8-awards-count strong { font-size: 58px !important; }
+  html body.home-page .v8-review { padding: 26px 22px 24px !important; min-height: 0; }
+  html body.home-page .v8-review blockquote { font-size: 17px !important; }
+  html body.home-page .v8-review.v8-long blockquote { font-size: 15px !important; }
+}
+
+/* --- уточнения после проверки --- */
+html body.home-page .header-phone a,
+html body.home-page .header-phone a * { color: var(--accent) !important; font-size: 17px !important; font-weight: 600 !important; }
+html body.home-page .header-phone > span,
+html body.home-page .header-phone > span * { font-size: 11.5px !important; }
+html body.home-page .hp-credentials .hp-number .hp-number-value strong,
+html body.home-page .hp-credentials .hp-number .hp-number-value strong .v7-num { font-size: 64px !important; line-height: .95 !important; font-weight: 400 !important; }
+html body.home-page .hp-credentials .hp-number .hp-number-value p { margin-top: 6px !important; }
+html body.home-page .hp-media {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  min-height: 360px !important;
+  padding: 14px !important;
+}
+html body.home-page .hp-media-title { margin: 0 !important; }
+html body.home-page .hp-media:nth-child(3) .hp-media-space img { object-position: center 18% !important; }
+html body.home-page .hp-media:nth-child(2) .hp-media-space img { object-position: 40% 40% !important; }
+html body.home-page .v8-footer-address p > span { grid-column: 2; }
+@media (min-width: 1200px) and (max-width: 1359px) {
+  html body.home-page { --v8-nav-gap: 10px; }
+  html body.home-page .utility-nav { margin-left: 14px !important; }
+  html body.home-page .services-nav { margin-left: 12px !important; }
+  html body.home-page .header-phone a, html body.home-page .header-phone a * { font-size: 15px !important; }
+}
+
+/* --- мобильные уточнения --- */
+html body.home-page .mobile-menu .drawer-footer { display: grid !important; grid-template-columns: 1fr !important; gap: 14px !important; }
+html body.home-page .mobile-menu .drawer-footer .drawer-contact { display: flex !important; flex-direction: column; gap: 4px; }
+html body.home-page .mobile-menu .drawer-footer .drawer-contact a.v8-drawer-phone[href],
+html body.home-page .mobile-menu .drawer-footer .drawer-contact a.v8-drawer-phone[href] * {
+  color: var(--accent) !important;
+  font-family: var(--body) !important;
+  font-size: 27px !important;
+  font-weight: 600 !important;
+  line-height: 1.1 !important;
+}
+html body.home-page .mobile-menu .drawer-footer .drawer-actions { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+html body.home-page .mobile-menu .drawer-footer .drawer-act { justify-content: center !important; min-width: 0 !important; width: 100% !important; }
+
+@media (max-width: 719px) {
+  html body.home-page .results-area .messengers { flex-wrap: nowrap !important; gap: 6px !important; }
+  html body.home-page .results-area .messengers a { width: 38px !important; height: 38px !important; min-width: 38px !important; min-height: 38px !important; padding: 0 !important; }
+  html body.home-page .results-area .messengers .social-symbol,
+  html body.home-page .results-area .messengers .brand-icon { width: 17px !important; height: 17px !important; }
+  html body.home-page .hp-hero-phone, html body.home-page .hp-hero-phone * { font-size: 15px !important; color: var(--accent) !important; font-weight: 600 !important; }
+
+  html body.home-page .hp-review-stack { align-items: flex-start !important; }
+  html body.home-page .v8-review::before { font-size: 80px; right: 18px; top: 4px; }
+
+  html body.home-page .hp-stage-visual { display: flex !important; flex-direction: column !important; align-items: flex-start !important; height: auto !important; min-height: 300px !important; padding: 24px !important; }
+  html body.home-page .hp-stage-number { font-size: 56px !important; white-space: nowrap; }
+  html body.home-page .hp-stage-visual h3 { font-size: 23px !important; margin: 40px 0 16px !important; max-width: 100% !important; }
+  html body.home-page .v8-stage-mark { width: 96px !important; height: 96px !important; inset: 20px 20px auto auto !important; }
+  html body.home-page .v8-stage-iconwrap { width: 60px; height: 60px; }
+  html body.home-page .v8-stage-iconwrap .v7-stage-icon { width: 30px !important; height: 30px !important; }
+  html body.home-page .hp-step > p { font-size: 15px !important; }
+
+  html body.home-page .hp-team-layout .hp-team-caption { padding: 12px 12px 14px !important; }
+  html body.home-page .hp-team-layout .hp-team-caption h3 { font-size: 14px !important; overflow-wrap: anywhere; hyphens: auto; }
+  html body.home-page .hp-team-layout { gap: 10px !important; }
+}
+@media (max-width: 420px) {
+  html body.home-page .hp-hero-phone, html body.home-page .hp-hero-phone * { font-size: 13px !important; letter-spacing: -.01em; }
+}
+
+@media (max-width: 1199px) {
+  html body.home-page .v8-form-row { grid-template-columns: 1fr; }
+}
+html body.home-page .hp-form-popup .v8-form-row { grid-template-columns: 1fr; }
+html body.home-page .hp-form-popup .v8-form-row .hp-contact-choice { flex-wrap: wrap !important; }
+html body.home-page .gallery-dialog .result-pair figure { overflow: hidden; }
+html body.home-page .gallery-dialog .result-pair img { width: 100% !important; height: 100% !important; max-height: none !important; object-fit: cover !important; object-position: center 30%; }
+
+/* =================== v8.1 — правки по скринам =================== */
+
+/* Шапка: одинаковое начертание, больше воздуха, нормальная плашка при наведении */
+html body.home-page :is(.utility-nav .utility-item, .services-nav .service-trigger) {
+  font-weight: 400 !important;
+  border-radius: 999px !important;
+}
+@media (min-width: 1200px) {
+  html body.home-page .utility-nav .utility-item,
+  html body.home-page .services-nav .service-trigger { padding: 8px 10px !important; }
+  html body.home-page { --v8-nav-gap: 4px; }
+  html body.home-page .utility-nav { margin-left: 16px !important; }
+  html body.home-page .services-nav { margin-left: 6px !important; }
+}
+@media (min-width: 1200px) and (max-width: 1499px) {
+  html body.home-page { --v8-nav-gap: 2px; }
+  html body.home-page .utility-nav .utility-item,
+  html body.home-page .services-nav .service-trigger { padding: 8px 9px !important; }
+  html body.home-page .utility-nav { margin-left: 10px !important; }
+  html body.home-page .services-nav { margin-left: 2px !important; }
+}
+@media (min-width: 1200px) and (max-width: 1439px) {
+  html body.home-page .header-book .book-full { display: none !important; }
+  html body.home-page .header-book .book-short { display: inline !important; }
+}
+@media (min-width: 1200px) and (max-width: 1359px) {
+  html body.home-page { --v8-nav-gap: 0px; }
+  html body.home-page .utility-nav .utility-item,
+  html body.home-page .services-nav .service-trigger { padding: 7px 7px !important; }
+}
+
+/* Первый экран: контент справа с равными отступами внутри бежевой плашки */
+@media (min-width: 1200px) {
+  html body.home-page .results-area { margin-left: 34px !important; margin-right: 0 !important; padding: 12px 10px 26px 12px !important; }
+  html body.home-page .results-area .messengers { justify-content: flex-start !important; }
+  html body.home-page .doctor-figure { bottom: 0 !important; transform: translateX(-14px); }
+}
+/* Светлана стоит на нижней границе — без зазора */
+html body.home-page img.doctor { display: block !important; vertical-align: bottom; }
+html body.home-page .doctor-figure { line-height: 0; }
+
+/* Рубрики «Достижения…», «Отзывы…» — снова красным текстом капсом, без плашки */
+html body.home-page .hp-kicker {
+  display: inline-block !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  color: var(--accent) !important;
+  text-transform: uppercase !important;
+  letter-spacing: .06em !important;
+  font: 500 12px/1.3 var(--body) !important;
+}
+html body.home-page :is(.hp-all-services, .v8-awards, .hp-footer) .hp-kicker { color: rgba(255,255,255,.82) !important; }
+/* В блоге рубрики остаются плашками */
+html body.home-page .hp-blog .hp-kicker {
+  display: inline-flex !important;
+  padding: 6px 13px !important;
+  border-radius: 999px !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: var(--ink) !important;
+  background: rgba(255,255,255,.62) !important;
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+}
+html body.home-page .hp-checklist-v2 .hp-kicker { background: rgba(255,255,255,.18) !important; color: #fff !important; }
+html body.home-page :is(.hp-article-section, .hp-media-space > span) {
+  background: rgba(255,255,255,.55) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  backdrop-filter: blur(12px) saturate(1.2);
+  color: #221b19 !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.5);
+}
+html body.home-page :is(#blog, #team) .hp-swipe { display: none !important; }
+
+/* Дипломы — компактнее */
+html body.home-page .v8-cert-card .hp-cert-photo { height: 104px !important; }
+html body.home-page .v8-cert-card .hp-cert-photo img { width: 78px !important; height: 104px !important; }
+html body.home-page .v8-cert-card .hp-cert-photo img:nth-child(2) { left: 52px !important; }
+html body.home-page .v8-cert-card .hp-cert-photo img:nth-child(3) { left: 104px !important; }
+@media (max-width: 719px) {
+  html body.home-page .v8-cert-card .hp-cert-photo { height: 84px !important; }
+  html body.home-page .v8-cert-card .hp-cert-photo img { width: 63px !important; height: 84px !important; }
+  html body.home-page .v8-cert-card .hp-cert-photo img:nth-child(2) { left: 42px !important; }
+  html body.home-page .v8-cert-card .hp-cert-photo img:nth-child(3) { left: 84px !important; }
+}
+
+/* Отзывы: воздух в заголовке, без обводки, одинаковая высота, до 6 строк */
+html body.home-page .hp-reviews > div:first-child { gap: 0 !important; }
+html body.home-page .hp-reviews .hp-kicker { margin-bottom: 18px !important; }
+html body.home-page .hp-reviews h2 { margin: 0 0 40px !important; line-height: 1.22 !important; }
+html body.home-page .v8-review { border-left: 0 !important; min-height: 0 !important; height: 100%; }
+html body.home-page .v8-review blockquote {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  overflow: hidden !important;
+  font-size: 18px !important;
+  line-height: 1.55 !important;
+  min-height: calc(6 * 1.55em);
+}
+html body.home-page .v8-review.v8-long blockquote { font-size: 18px !important; line-height: 1.55 !important; }
+html body.home-page .v8-review-more {
+  align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: -8px;
+  padding: 0; border: 0; background: none; cursor: pointer;
+  color: var(--accent); font: 500 14px/1.2 var(--body);
+}
+html body.home-page .v8-review-more[hidden] { display: none !important; }
+html body.home-page .v8-review-more svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+html body.home-page .v8-review-dialog { max-width: 640px; }
+html body.home-page .v8-review-dialog blockquote { margin: 18px 0 20px; font: 400 17px/1.6 var(--body); color: var(--ink); }
+html body.home-page .v8-review-dialog-cap { display: flex; gap: 10px; align-items: baseline; color: var(--muted); font-size: 13px; }
+html body.home-page .v8-review-dialog-cap strong { color: var(--ink); font-size: 15px; }
+@media (max-width: 719px) {
+  html body.home-page .hp-review-stack { align-items: stretch !important; }
+  html body.home-page .v8-review blockquote,
+  html body.home-page .v8-review.v8-long blockquote { font-size: 15px !important; }
+  html body.home-page .hp-reviews h2 { margin-bottom: 28px !important; }
+}
+
+/* Консультация: красный градиент, иконки способов связи с заливкой */
+html body.home-page .v8-consult-shade {
+  background: linear-gradient(180deg, rgba(181,31,42,0) 38%, rgba(181,31,42,.62) 66%, rgba(150,22,32,.95) 100%) !important;
+}
+html body.home-page .hp-contact-choice label:first-child svg { fill: currentColor !important; stroke: none !important; }
+html body.home-page .hp-contact-choice svg { width: 17px !important; height: 17px !important; }
+
+/* Этапы: кольцо заполняется по мере прокрутки этапов */
+html body.home-page .v8-stage-ring .v8-ring-track { fill: none; stroke: rgba(255,255,255,.2); stroke-width: 3; }
+html body.home-page .v8-stage-ring .v8-ring-progress {
+  fill: none; stroke: #fff; stroke-width: 5; stroke-linecap: round;
+  stroke-dasharray: 100 100;
+  transition: stroke-dashoffset .45s ease;
+}
+
+/* Команда: условные ФИО, роль над именем */
+html body.home-page .v8-team-role { margin: 0 !important; font-size: 12.5px !important; line-height: 1.3; color: var(--muted, #6b605b) !important; }
+html body.home-page .hp-team-lead .v8-team-role { color: rgba(255,255,255,.8) !important; }
+html body.home-page .hp-team-layout .hp-team-caption h3 { hyphens: manual !important; overflow-wrap: normal !important; }
+@media (max-width: 719px) {
+  html body.home-page .hp-team-layout .hp-team-caption h3 { font-size: 13.5px !important; line-height: 1.22 !important; }
+  html body.home-page .v8-team-role { font-size: 11px !important; }
+}
+
+/* СМИ: карточки выше, меньше отступ от заголовка */
+html body.home-page #media .hp-heading { margin-bottom: 22px !important; }
+html body.home-page .hp-media { min-height: 460px !important; }
+@media (max-width: 719px) { html body.home-page .hp-media { min-height: 400px !important; } }
+
+/* Плюсы: строгий круг, ровный крест по центру */
+html body.home-page .hp-faq summary > span,
+html body.home-page .hp-service-top .hp-round {
+  position: relative !important;
+  display: block !important;
+  flex: 0 0 auto !important;
+  width: 32px !important; height: 32px !important; min-width: 32px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  font-size: 0 !important; line-height: 0 !important; color: transparent !important;
+}
+html body.home-page .hp-faq summary > span::before,
+html body.home-page .hp-faq summary > span::after,
+html body.home-page .hp-service-top .hp-round::before,
+html body.home-page .hp-service-top .hp-round::after {
+  content: "";
+  position: absolute; left: 50%; top: 50%;
+  width: 12px; height: 1.6px; border-radius: 2px;
+  background: var(--accent);
+  transform: translate(-50%, -50%);
+}
+html body.home-page .hp-faq summary > span::after,
+html body.home-page .hp-service-top .hp-round::after { transform: translate(-50%, -50%) rotate(90deg); }
+html body.home-page .hp-service-top .hp-round::before,
+html body.home-page .hp-service-top .hp-round::after { background: #fff; }
+@media (max-width: 719px) {
+  html body.home-page .hp-faq summary > span { width: 28px !important; height: 28px !important; min-width: 28px !important; }
+}
+
+/* Подвал: адреса без плашек, композиционно */
+html body.home-page .v8-footer-address {
+  background: none !important; box-shadow: none !important; padding: 0 !important; border-radius: 0 !important;
+  grid-template-columns: auto auto !important; gap: 8px 44px !important; justify-self: center;
+}
+html body.home-page .v8-addr-title {
+  grid-column: 1 / -1; padding: 0 !important; opacity: .7;
+  text-transform: uppercase; letter-spacing: .08em; font-size: 11px !important;
+}
+html body.home-page .v8-footer-address p {
+  background: none !important; padding: 0 !important; border-radius: 0 !important;
+  column-gap: 10px !important; align-items: start !important;
+  font-size: 15px !important; line-height: 1.35 !important;
+}
+html body.home-page .v8-footer-address p > span { font-weight: 500; }
+html body.home-page .v8-footer-address p small { font-size: 12px !important; opacity: .72; margin-top: 3px; max-width: 250px; }
+html body.home-page .v8-footer-address .hp-icon { width: 18px !important; height: 18px !important; margin-top: 1px; opacity: .85; }
+@media (max-width: 1199px) { html body.home-page .v8-footer-address { justify-self: start; } }
+@media (max-width: 719px) { html body.home-page .v8-footer-address { grid-template-columns: 1fr !important; gap: 14px !important; } }
+
+/* =================== v8.2 =================== */
+/* Услуги: ч/б фото, текст про цены по левому краю */
+html body.home-page .hp-services-grid .hp-service > img { filter: grayscale(1) !important; }
+html body.home-page .hp-services .hp-heading > p { text-align: left !important; }
+@media (max-width: 719px) {
+  html body.home-page .hp-services .hp-heading > p { margin: 12px 0 0 !important; max-width: none !important; }
+}
+/* Плюс в карточке услуги: без сдвига и масштаба, при открытии — крестик */
+html body.home-page .hp-service-top .hp-round,
+html body.home-page .hp-service-top .hp-round:hover,
+html body.home-page .hp-service.is-open .hp-service-top .hp-round { transform: none !important; }
+html body.home-page .hp-service-top .hp-round::before,
+html body.home-page .hp-service-top .hp-round::after { transition: transform .2s ease; }
+html body.home-page .hp-service.is-open .hp-service-top .hp-round::before { transform: translate(-50%, -50%) rotate(45deg) !important; }
+html body.home-page .hp-service.is-open .hp-service-top .hp-round::after { transform: translate(-50%, -50%) rotate(135deg) !important; }
+@media (max-width: 1199px) {
+  html body.home-page .hp-service-list { overflow-y: auto !important; overscroll-behavior: contain; }
+}
+@media (max-width: 719px) {
+  html body.home-page .hp-services-grid { grid-template-rows: 240px 240px 240px auto !important; }
+}
+
+/* Иконка свайпа — на одной линии с заголовком справа */
+html body.home-page .hp-reviews-title { align-items: center !important; margin-bottom: 28px; }
+html body.home-page .hp-reviews-title h2 { margin: 0 !important; }
+html body.home-page .hp-reviews-title .hp-swipe { align-self: center; order: 1; }
+@media (min-width: 720px) { html body.home-page .hp-reviews-title { margin-bottom: 40px; } }
+
+/* СМИ: слайдер со свайпом */
+html body.home-page #media .hp-heading { display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: space-between !important; gap: 16px; }
+html body.home-page #media .hp-heading h2 { margin: 0 !important; }
+html body.home-page #media .hp-swipe { display: inline-block !important; }
+html body.home-page .hp-media-grid {
+  display: grid !important;
+  grid-template-columns: none !important;
+  grid-auto-flow: column !important;
+  grid-auto-columns: calc((100% - 32px) / 2.4) !important;
+  gap: 16px !important;
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  cursor: grab;
+  padding-bottom: 2px;
+}
+html body.home-page .hp-media-grid::-webkit-scrollbar { display: none; }
+html body.home-page .hp-media-grid.is-dragging { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+html body.home-page .hp-media-grid .hp-media { scroll-snap-align: start; }
+html body.home-page .hp-media-grid img { pointer-events: none; -webkit-user-drag: none; }
+@media (max-width: 719px) {
+  html body.home-page .hp-media-grid { grid-auto-columns: 86% !important; gap: 12px !important; }
+}
+/* Плашки источников в СМИ — как в блоге */
+html body.home-page .hp-media-space > span,
+html body.home-page .hp-article-section {
+  background: rgba(251, 250, 247, .82) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(1.2);
+  backdrop-filter: blur(12px) saturate(1.2);
+  color: #221b19 !important;
+  border-radius: 999px !important;
+  font: 500 12px/1.2 var(--body) !important;
+  padding: 6px 13px !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  box-shadow: none !important;
+}
+@media (max-width: 719px) {
+  html body.home-page .hp-media-title h3 { font-size: 15px !important; line-height: 1.25 !important; overflow-wrap: normal !important; word-break: normal !important; hyphens: none !important; }
+}
+
+/* =================== v8.3 =================== */
+
+/* «Онлайн, без оплаты» — читаемая плашка на светлом фоне */
+html body.home-page .hp-footer .hp-kicker.v8-cta-kicker {
+  display: inline-flex !important; padding: 6px 13px !important; border-radius: 999px !important;
+  background: var(--accent) !important; color: #fff !important;
+  text-transform: none !important; letter-spacing: 0 !important; font: 500 12px/1.2 var(--body) !important;
+}
+
+/* Отзывы — больше воздуха */
+html body.home-page .v8-review { gap: 28px !important; padding: 40px 44px 36px !important; }
+html body.home-page .v8-review blockquote { line-height: 1.65 !important; }
+html body.home-page .v8-review-more { margin-top: -10px !important; }
+html body.home-page .v8-review figcaption { padding-top: 22px !important; }
+@media (max-width: 719px) {
+  html body.home-page .v8-review { gap: 22px !important; padding: 28px 24px 26px !important; }
+  html body.home-page .v8-review-more { margin-top: -6px !important; }
+}
+
+/* Услуги: открытая карточка без теней, плашка «N операций» — белый текст */
+html body.home-page .hp-service.is-open,
+html body.home-page .hp-service.is-open *,
+html body.home-page .hp-service-list,
+html body.home-page .hp-service-list * { box-shadow: none !important; }
+html body.home-page .hp-service.is-open .hp-service-top > span { background: var(--accent) !important; color: #fff !important; }
+html body.home-page .hp-service.is-open .hp-service-top > span .v7-num { color: #fff !important; }
+/* Отступ от заголовка услуг к тексту меньше */
+html body.home-page .hp-services .hp-heading { margin-bottom: 24px !important; }
+@media (max-width: 719px) {
+  html body.home-page .hp-services .hp-heading > p { margin-top: 6px !important; }
+  html body.home-page .hp-services .hp-heading { margin-bottom: 18px !important; }
+}
+
+/* СМИ: белые плашки изданий; на десктопе 3 карточки без слайдера */
+html body.home-page .hp-media-space > span { background: #fff !important; -webkit-backdrop-filter: none; backdrop-filter: none; }
+@media (min-width: 720px) {
+  html body.home-page .hp-media-grid {
+    grid-auto-flow: row !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-auto-columns: auto !important;
+    overflow: visible !important; cursor: default !important; scroll-snap-type: none !important;
+  }
+  html body.home-page #media .hp-swipe { display: none !important; }
+}
+
+/* Сертификаты без тени */
+html body.home-page .v8-cert-card .hp-cert-photo img { box-shadow: none !important; border: 1px solid rgba(53,45,43,.1); }
+
+/* Подвал: адреса без иконок */
+html body.home-page .v8-footer-address p { display: flex !important; flex-direction: column; gap: 3px; }
+html body.home-page .v8-footer-address p small { margin-top: 0 !important; }
+html body.home-page .hp-service.is-open *, html body.home-page .hp-service-list, html body.home-page .hp-service-list * { text-shadow: none !important; filter: none !important; }
+html body.home-page .hp-review.v8-review:not([hidden]) { display: flex !important; flex-direction: column !important; }
+html body.home-page .hp-review.v8-review > * { margin-top: 0 !important; margin-bottom: 0 !important; }
+html body.home-page .hp-review.v8-review > .v8-review-more { margin-top: -12px !important; }
+
+/* =================== v8.4 =================== */
+/* Контейнер фильтров, который переносится на 2 строки, — обычное скругление */
+html body.home-page .hp-filter { border-radius: 24px !important; }
+@media (max-width: 719px) { html body.home-page .hp-filter { border-radius: 20px !important; } }
+
+/* Без теней везде */
+html body.home-page *, html body.home-page *::before, html body.home-page *::after,
+html body.home-page dialog, html body.home-page dialog * { box-shadow: none !important; text-shadow: none !important; }
+html body.home-page .v8-review, html body.home-page .hp-cert-photo img { filter: none !important; }
+/* активная точка этапа — кольцо без тени */
+html body.home-page .hp-step.is-active:before { outline: 1px solid var(--ink, #221b19); outline-offset: 4px; }
+/* плашки, у которых обводка была тенью */
+html body.home-page .hp-kicker.v8-cta-kicker, html body.home-page .hp-blog .hp-kicker { outline: 0; }
+
+/* Отзывы: строгие отступы — плашка / текст / кнопка / подпись */
+html body.home-page .hp-review.v8-review { gap: 0 !important; }
+html body.home-page .hp-review.v8-review > .v8-review-tag { margin: 0 0 22px !important; }
+html body.home-page .hp-review.v8-review > blockquote { margin: 0 !important; }
+html body.home-page .hp-review.v8-review > .v8-review-more { margin: 18px 0 0 !important; }
+html body.home-page .hp-review.v8-review > figcaption { margin: 24px 0 0 !important; padding-top: 20px !important; }
+@media (max-width: 719px) {
+  html body.home-page .hp-review.v8-review > .v8-review-tag { margin-bottom: 18px !important; }
+  html body.home-page .hp-review.v8-review > .v8-review-more { margin-top: 16px !important; }
+  html body.home-page .hp-review.v8-review > figcaption { margin-top: 20px !important; padding-top: 18px !important; }
+}
+
+/* Меню: акцент на зоне */
+html body.home-page :is(.category-photo, .mobile-group > summary) img { object-fit: cover !important; object-position: center center !important; }
+
+/* Услуги: новые фото груди и живота */
+html body.home-page .hp-service > img.v8-img-breast { object-position: 50% 55% !important; }
+html body.home-page .hp-service > img.v8-img-abdomen { object-position: 45% 50% !important; }
+
+/* Блог: глаз целиком в видимой части */
+html body.home-page .hp-article-photo > img { object-fit: cover !important; object-position: 50% 20% !important; }
+
+/* Команда: с запасом над головой */
+html body.home-page .hp-team-layout .hp-team-photo img,
+html body.home-page .hp-team-lead .hp-team-photo img { object-position: 50% 0 !important; }
+html body.home-page .mobile-group > summary img[src*="v8-menu-body"] { object-position: 50% 78% !important; }
+html body.home-page .category-photo img[src*="v8-menu-body"] { object-position: 50% 70% !important; }
